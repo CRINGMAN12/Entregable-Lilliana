@@ -1,70 +1,62 @@
-# 🛠️ Taller de Promesas en JavaScript + Tailwind CSS
+💻 Laboratorio Interactivo de Promesas en JS + Tailwind
+Explora 25 desafíos reales usando Promesas en JavaScript, presentados con una interfaz moderna y funcional gracias a Tailwind CSS.
 
-Este proyecto es una aplicación web que simula 25 **casos prácticos** utilizando **Promesas en JavaScript**, presentados de forma interactiva con **Tailwind CSS**.
+🧰 Funcionalidades
+🔄 25 ejercicios prácticos con Promise
 
----
+🧩 Modal emergente para cada caso
 
-## 📦 Contenido
+🖱️ Botón para ejecutar los ejemplos en vivo
 
-- ✅ 25 Casos reales con promesas (`Promise`)
-- 🎨 Interfaz moderna con Tailwind CSS
-- 🧭 Navegación lateral (sidebar)
-- 💬 Modal dinámico para cada caso
-- 🧪 Botón para ejecutar cada ejemplo
-- 🚫 Control de errores y simulación de delays
+📋 Barra lateral para navegar entre los retos
 
----
+⚠️ Simulación de errores y tiempos de espera
 
-## 🧱 Estructura del Proyecto
-
-```
-📁 taller_promesas_tailwind/
+🗂️ Estructura del Proyecto
+css
+Copiar
+Editar
+📁 laboratorio_promesas/
 │
-├── index.html        # Página principal con interfaz Tailwind
-├── script.js         # Lógica con todos los casos y modales
-├── README.md         # Este archivo
-```
+├── index.html       → Interfaz principal
+├── script.js        → Código JS con la lógica de casos
+├── README.md        → Documentación del proyecto
+🚦 Instrucciones de Uso
+Descarga o clona este repositorio.
 
----
+Abre el archivo index.html desde tu navegador.
 
-## 🚀 ¿Cómo usarlo?
+Selecciona un reto desde el menú lateral.
 
-1. Clona o descarga el repositorio.
-2. Abre el archivo `index.html` en tu navegador.
-3. Usa el **sidebar** para seleccionar un caso.
-4. En el **modal emergente**, haz clic en "Ejecutar".
-5. Observa el resultado de la promesa en tiempo real.
+En la ventana emergente, haz clic en "Ejecutar".
 
----
+Observa cómo se resuelve la promesa en tiempo real.
 
-## 🧩 Ejemplos de casos
+🧪 Casos Incluidos
+Temporizador simulado
 
-- Leer archivo local
-- Esperar cierto tiempo
-- Validar login
-- Obtener datos con fetch
-- Cargar imagen
-- Obtener ubicación (geolocalización)
-- Simular reintentos automáticos
-- Cancelar una promesa (AbortController)
-- Validar formularios
-- Leer archivos en paralelo o en secuencia
-- ¡Y muchos más!
+Validación de credenciales
 
----
+Llamadas asíncronas con fetch
 
-## 🛠 Tecnologías utilizadas
+Geolocalización del usuario
 
-- ✅ **HTML5**
-- ✅ **JavaScript moderno (ES6+)**
-- ✅ **Tailwind CSS** para diseño responsivo y limpio
+Lectura secuencial de archivos
 
----
+Manejo de errores y cancelaciones
 
-## 🧑‍💻 Autor
+Carga de recursos multimedia
 
-Este proyecto fue desarrollado como parte de un **taller académico de Promesas en JavaScript** con aplicación práctica usando **Tailwind CSS**.
+¡Y más escenarios útiles!
 
----
+🛎️ Tecnologías Usadas
+🧱 HTML5
 
-¡Explora, modifica y aprende con cada caso! 💡
+⚙️ JavaScript ES6+
+
+🎨 Tailwind CSS para estilos modernos y responsivos
+
+👨‍🎓 Autoría
+Este laboratorio fue desarrollado como herramienta académica para enseñar asincronía en JavaScript mediante ejemplos visuales e interactivos con Tailwind CSS.
+
+🚀 Aprende, experimenta y adapta cada ejercicio a tus proyectos!
