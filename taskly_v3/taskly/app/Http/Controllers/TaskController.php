@@ -45,52 +45,14 @@ class TaskController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
+            'course_id' => 'required|exists:courses,id',
             'title' => 'required|string|max:255',
             'description' => 'nullable|string',
             'start_date' => 'required|date',
             'due_date' => 'required|date',
             'priority' => 'required|in:low,medium,high',
-            'status' => 'required|in:pending,completed',
-            'course_id' => 'required|string'
+            'status' => 'required|in:pending,completed'
         ]);
-
-        // Si el course_id es una materia predefinida, crear o encontrar el curso
-        if (!is_numeric($validated['course_id'])) {
-            $predefinedCourses = Course::getPredefinedCourses();
-            $courseName = null;
-            
-            // Buscar el nombre de la materia en las categorías predefinidas
-            foreach ($predefinedCourses as $category => $courses) {
-                if (isset($courses[$validated['course_id']])) {
-                    $courseName = $courses[$validated['course_id']];
-                    break;
-                }
-            }
-
-            if ($courseName) {
-                // Buscar si ya existe el curso para este usuario
-                $course = Course::where('user_id', auth()->id())
-                    ->where('name', $courseName)
-                    ->first();
-
-                // Si no existe, crear el curso
-                if (!$course) {
-                    $course = Course::create([
-                        'user_id' => auth()->id(),
-                        'name' => $courseName,
-                        'code' => strtoupper(substr($validated['course_id'], 0, 3)),
-                        'credits' => 3,
-                        'teacher' => 'Por asignar',
-                        'schedule' => 'Por asignar',
-                        'color' => '#'.str_pad(dechex(mt_rand(0, 0xFFFFFF)), 6, '0', STR_PAD_LEFT),
-                        'semester' => '2024-1',
-                        'professor' => 'Por asignar'
-                    ]);
-                }
-
-                $validated['course_id'] = $course->id;
-            }
-        }
 
         $task = Task::create([
             'user_id' => auth()->id(),

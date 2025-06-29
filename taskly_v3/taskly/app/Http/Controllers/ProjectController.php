@@ -17,14 +17,23 @@ class ProjectController extends Controller
 
     public function index()
     {
-        $projects = Project::with('course')
-            ->where('user_id', auth()->id())
-            ->orderBy('due_date')
-            ->paginate(10);
-            
-        $courses = Course::where('user_id', auth()->id())->get();
-            
-        return view('projects.index', compact('projects', 'courses'));
+        $user = auth()->user();
+        $projects = $user->projects()->with(['course', 'tags', 'user'])->get();
+        $courses = $user->courses;
+
+        $activeProjects = $projects->whereIn('status', ['Pendiente', 'En progreso'])->count();
+        $completedProjects = $projects->where('status', 'Completado')->count();
+        $overdueProjects = $projects->where('status', '!=', 'Completado')->where('due_date', '<', now())->count();
+        $averageProgress = $projects->count() > 0 ? round($projects->avg('progress')) : 0;
+
+        return view('projects.index', compact(
+            'projects',
+            'courses',
+            'activeProjects',
+            'completedProjects',
+            'overdueProjects',
+            'averageProgress'
+        ));
     }
 
     public function create()

@@ -14,9 +14,9 @@ return new class extends Migration
             $table->string('name');
             $table->string('code', 50);
             $table->text('description')->nullable();
-            $table->string('color', 7)->default('#3B82F6');
-            $table->string('semester', 50)->default('2024-1');
-            $table->string('professor')->default('Por asignar');
+            $table->string('color', 7);
+            $table->string('semester', 50);
+            $table->string('professor');
             $table->string('schedule');
             $table->integer('credits');
             $table->timestamps();

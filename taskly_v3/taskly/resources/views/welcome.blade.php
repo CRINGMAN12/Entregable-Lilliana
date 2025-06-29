@@ -6,6 +6,7 @@
     <title>Taskly - Organizador estudiantil</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     
     <style>
@@ -45,29 +46,18 @@
         }
         
         .gradient-text {
-            background: linear-gradient(135deg,rgb(0, 0, 0),rgb(0, 0, 0) );
+            background: linear-gradient(45deg, #4F46E5, #06B6D4);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
-        .gradient-text1{
-            background: linear-gradient(135deg,rgb(0, 0, 0),rgb(0, 0, 0) );
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-        .gradient-text2{
-            background: linear-gradient(135deg,rgb(255, 255, 255),hsl(0, 0.00%, 100.00%) );
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+        
         .stats-card {
             transition: all 0.3s ease;
         }
-         
+        
         .stats-card:hover {
-            background: linear-gradient(135deg, #BFDBFE, #93C5FD);
+            background: linear-gradient(135deg, #4F46E5, #06B6D4);
             color: white;
             transform: scale(1.05);
         }
@@ -77,14 +67,16 @@
     <!-- Hero Section -->
     <section class="relative bg-gradient-to-br from-indigo-600 to-cyan-500 text-white overflow-hidden">
         <div class="wave-shape text-white">
-           
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="currentColor"></path>
+            </svg>
         </div>
         
-        <div class="container mx-auto px-6 py-24 md:py-100 relative z-10">
+        <div class="container mx-auto px-6 py-24 md:py-32 relative z-10">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-12 md:mb-0 md:pr-10">
                     <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
-                        Organiza tu <span class="gradient-text2">vida estudiantil</span> con Taskly
+                        Organiza tu <span class="gradient-text">vida estudiantil</span> con Taskly
                     </h1>
                     
                     <div class="text-xl md:text-2xl font-medium mb-8 h-10">
@@ -138,19 +130,19 @@
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div class="stats-card bg-gray-50 p-6 rounded-xl text-center border border-gray-200">
-                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">82</span>%</h3>
+                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">95</span>%</h3>
                     <p class="text-gray-600">Estudiantes mejor organizados</p>
                 </div>
                 <div class="stats-card bg-gray-50 p-6 rounded-xl text-center border border-gray-200">
-                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">90</span>%</h3>
+                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">87</span>%</h3>
                     <p class="text-gray-600">Mejor rendimiento académico</p>
                 </div>
                 <div class="stats-card bg-gray-50 p-6 rounded-xl text-center border border-gray-200">
-                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">14</span>+</h3>
+                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">1000</span>+</h3>
                     <p class="text-gray-600">Horas ahorradas</p>
                 </div>
                 <div class="stats-card bg-gray-50 p-6 rounded-xl text-center border border-gray-200">
-                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">4</span>/5</h3>
+                    <h3 class="text-indigo-600 text-3xl font-bold mb-2"><span class="counter">4.9</span>/5</h3>
                     <p class="text-gray-600">Calificación promedio</p>
                 </div>
             </div>
@@ -161,7 +153,7 @@
     <section id="features" class="py-16 bg-gray-50">
         <div class="container mx-auto px-6">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Diseñado para <span class="gradient-text1">estudiantes</span></h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Diseñado para <span class="gradient-text">estudiantes</span></h2>
                 <p class="text-xl text-gray-600 max-w-2xl mx-auto">Taskly te ayuda a manejar tus proyectos universitarios, trabajos en grupo y recordatorios importantes</p>
             </div>
             
@@ -217,7 +209,26 @@
         </div>
     </section>
 
-       
+    <!-- Video Demo Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col items-center">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Mira Taskly en acción</h2>
+                    <p class="text-xl text-gray-600 max-w-2xl">Un vistazo rápido a cómo Taskly puede transformar tu organización estudiantil</p>
+                </div>
+
+                <div class="w-full max-w-4xl rounded-xl overflow-hidden shadow-2xl relative">
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-200 flex items-center justify-center">
+                        <button class="play-button" style="width: 80px; height: 80px; background: linear-gradient(45deg, #4F46E5, #06B6D4); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 10px 25px rgba(79, 70, 229, 0.3);">
+                            <i class="fas fa-play text-white text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials Section -->
     <section class="py-16 bg-gradient-to-br from-indigo-50 to-cyan-50">
         <div class="container mx-auto px-6">
@@ -363,7 +374,9 @@
                 <a href="{{ route('register') }}" class="bg-white text-indigo-600 hover:bg-gray-100 px-8 py-4 rounded-full font-semibold text-lg shadow-lg transition-all transform hover:scale-105 flex items-center justify-center">
                     <i class="fas fa-user-plus mr-2"></i> Crear cuenta
                 </a>
-               
+                <a href="#" class="border-2 border-white text-white hover:bg-white hover:text-indigo-600 px-8 py-4 rounded-full font-semibold text-lg transition-all flex items-center justify-center">
+                    <i class="fas fa-play-circle mr-2"></i> Ver demo
+                </a>
             </div>
         </div>
     </section>
@@ -408,7 +421,7 @@
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="https://www.instagram.com/taskly2025/" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition">
                             <i class="fab fa-instagram"></i>
                         </a>
                         <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-white hover:bg-indigo-600 transition">
